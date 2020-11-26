@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+
+#env
+.env
+
+# Misc
+.DS_Store
+firebase-debug.log
+# Local Netlify folder
+.netlify

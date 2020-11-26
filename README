@@ -1,0 +1,53 @@
+
+This file contains all the node js mysql commands that I have learned
+
+To do all this, you must have created a connection to mysql using something like const db = mysql.createConnection({})
+
+!---------------------------: Connect to the DB
+db.connect((err) => {
+	if (err) console.log(err);
+    console.log('Connected to the DB');
+    
+    !---------------------------Create DB: nodeDB
+	db.query('CREATE DATABASE nodeDB', (err, result) => {
+		if (err) console.log(err);
+		console.log('Database Created!');
+    });
+
+    !----------------------------CREATE TABLE: users
+    let sql = 'CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY, email VARCHAR(255), password VARCHAR(255))';
+	db.query(sql, (err, result) => {
+		if (err) throw err;
+		console.log('table has been created');
+    });
+
+
+
+    !----------------------------ALTER TABLE: users
+	let sql = 'ALTER TABLE users ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY';
+	db.query(sql, (err, result) => {
+		if (err) throw err;
+		console.log('table has been created');
+	});
+
+
+	!----------------------------ALTER TABLE: users
+	let sql = 'ALTER TABLE users ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY';
+	db.query(sql, (err, result) => {
+		if (err) throw err;
+		console.log('table has been altered');
+	});
+
+
+	!----------------------------INSERT INTO: movies
+	let sql = "INSERT INTO movies (name, email) VALUES ()";
+	db.query(sql, (err, result) => {
+		if (err) throw err;
+		console.log('Data has been inserted into the table');
+	})
+});
+
+
+
+
+
