@@ -51,4 +51,3 @@ Client Env contains Firebase Connection Keys that can be found in your Firebase 
 ## Running the Project 
 1. inside of /server run command npm run dev 
 2. frontend will start on localhost:3000 and Backend will start on localhost:5000
-     
